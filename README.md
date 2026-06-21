@@ -2,7 +2,7 @@
 
 A Linux-to-Windows cross-compilation environment. Imitates [MSYS2](https://www.msys2.org/) (which is Windows-only) on other platforms.
 
-Can also be made to run on MacOS, Termux, FreeBSD with some tinkering, see below.
+Can also be made to run on MacOS, Termux, and FreeBSD, see below.
 
 Features:
 
@@ -54,7 +54,7 @@ Here's how it works:
 
     Run `sudo pkg install make wget tar zstd gawk which gnupg gpgv llvm clang lld`
 
-    * In Termux all package manager operations below (`make install ...`) have to be peformed as `proot --link2symlink make install ...` (otherwise we can't extract package archives with hardlinks in them). The package installation will take a long time.
+    * In Termux package installation (`make install ...`) has to be peformed as `proot --link2symlink make install ...` (otherwise we can't extract package archives with hardlinks in them). Package installation will take a long time.
 
     * There's no Wine in the default Termux packages, but Wine isn't strictly required.
 
